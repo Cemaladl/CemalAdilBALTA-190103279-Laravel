@@ -1,4 +1,4 @@
 Cemal
 
 
-Emin allah razı olsun
+Emin allah razı olsun 2x
