@@ -36,3 +36,9 @@ Route::get('client/create', function() {
 });
 
 Route::post('client/create', [ClientController::class, 'store'])->name('add-client');
+Route::get('client/{id}', [ClientController::class, 'get_client']);
+
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

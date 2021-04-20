@@ -53,9 +53,9 @@
 
 <div class="kutu">
 	<img src="foto1.jpg"  style="max-width:65%; height: auto;">
-	<h1> Computer Engineer </h1>
-	<h5>Web Developer - Desinger</h5>
-	<p> From Kazakhstan - Turkey</p>
+	<h1>{{__("profile.comp_eng")}}</h1>
+	<h5>{{__("profile.web_desinger")}}</h5>
+	<p>{{__("profile.from")}}</p>
 	<ul>
 		<li><a href="https://www.youtube.com/channel/UCyN4G4yt7aj2lMHPzWzSoLQ"><i class="fab fa-youtube"></i></a></li>
 		<li><a href="https://www.instagram.com/cemaladl/"><i class="fab fa-instagram"></i></a></li>
@@ -67,7 +67,18 @@
 </div>
 
 
-
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ Config::get('languages')[App::getLocale()] }}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    @foreach (Config::get('languages') as $lang => $language)
+        @if ($lang != App::getLocale())
+                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a>
+        @endif
+    @endforeach
+    </div>
+</li>
 
 
 

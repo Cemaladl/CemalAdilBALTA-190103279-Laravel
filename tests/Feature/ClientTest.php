@@ -38,8 +38,5 @@ class ClientTest extends TestCase
         $response->assertViewHas('client');
     }
 
-
-
-
 }
 

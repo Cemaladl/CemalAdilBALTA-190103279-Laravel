@@ -43,10 +43,10 @@
 
 	<div class="kutu1">
 		<img src="foto.jpg"  style="max-width:56%; height: 300px;">
-		<p>You Can Contact Me Via WhatsApp From This Number</p>
+		<p>{{__("profile.yazı1")}}</p>
 		<h5> +7 707 567 4115</h5>
-		<a href="{{route('main')}}"> Previous Page!</a>
-		<a href="{{route('about')}}"> About Me!</a>
+		<a href="{{route('main')}}">{{__("profile.button1")}}</a>
+		<a href="{{route('about')}}">{{__("profile.button2")}}</a>
 		
 
 	</div>
